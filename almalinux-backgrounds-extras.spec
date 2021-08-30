@@ -84,5 +84,5 @@ ln -s /usr/share/backgrounds/Alma-dark-2048x1536.jpg %{buildroot}/usr/share/back
 
 
 %changelog
-* Tue Aug 24 2021 Jonathan Wright <jonathan@effecthost.com> - 84.0-1
+* Tue Aug 24 2021 Jonathan Wright <jonathan@almalinux.org> - 84.0-1
 - package created
