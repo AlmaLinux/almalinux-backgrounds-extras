@@ -55,8 +55,12 @@ install -p -m 644 %{SOURCE3} %{buildroot}/usr/share/wallpapers/Alma-abstract-lig
 
 # xfce
 mkdir -p %{buildroot}/usr/share/backgrounds/images
-ln -s /usr/share/backgrounds/Alma-dark-2048x1536.jpg %{buildroot}/usr/share/backgrounds/images/default.png
-
+ln -s /usr/share/backgrounds/Alma-dark-2560x1440.jpg %{buildroot}/usr/share/backgrounds/default.png
+ln -s /usr/share/backgrounds/Alma-dark-2560x1440.jpg %{buildroot}/usr/share/backgrounds/images/default.png
+ln -s /usr/share/backgrounds/Alma-dark-2560x1440.jpg %{buildroot}/usr/share/backgrounds/images/default-16_9.png
+ln -s /usr/share/backgrounds/Alma-dark-2560x1600.jpg %{buildroot}/usr/share/backgrounds/images/default-16_10.png
+# TODO: Replace following symlink with an actual 5/4 ratio image if one is added in the future
+ln -s /usr/share/backgrounds/Alma-dark-2048x1536.jpg %{buildroot}/usr/share/backgrounds/images/default-5_4.png
 %post
 
 
@@ -67,46 +71,14 @@ ln -s /usr/share/backgrounds/Alma-dark-2048x1536.jpg %{buildroot}/usr/share/back
 
 %files
 /usr/share/wallpapers/Alma-abstract-dark
-/usr/share/wallpapers/Alma-abstract-dark/contents
-/usr/share/wallpapers/Alma-abstract-dark/contents/images
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/1800x1440.jpg
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/2048x1536.jpg
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/2560x1080.jpg
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/2560x1440.jpg
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/2560x1600.jpg
-/usr/share/wallpapers/Alma-abstract-dark/contents/images/3440x1440.jpg
-/usr/share/wallpapers/Alma-abstract-dark/metadata.desktop
 /usr/share/wallpapers/Alma-abstract-light
-/usr/share/wallpapers/Alma-abstract-light/contents
-/usr/share/wallpapers/Alma-abstract-light/contents/images
-/usr/share/wallpapers/Alma-abstract-light/contents/images/1800x1440.jpg
-/usr/share/wallpapers/Alma-abstract-light/contents/images/2048x1536.jpg
-/usr/share/wallpapers/Alma-abstract-light/contents/images/2560x1080.jpg
-/usr/share/wallpapers/Alma-abstract-light/contents/images/2560x1440.jpg
-/usr/share/wallpapers/Alma-abstract-light/contents/images/2560x1600.jpg
-/usr/share/wallpapers/Alma-abstract-light/contents/images/3440x1440.jpg
-/usr/share/wallpapers/Alma-abstract-light/metadata.desktop
 /usr/share/wallpapers/Alma-dark
-/usr/share/wallpapers/Alma-dark/contents
-/usr/share/wallpapers/Alma-dark/contents/images
-/usr/share/wallpapers/Alma-dark/contents/images/1800x1440.jpg
-/usr/share/wallpapers/Alma-dark/contents/images/2048x1536.jpg
-/usr/share/wallpapers/Alma-dark/contents/images/2560x1080.jpg
-/usr/share/wallpapers/Alma-dark/contents/images/2560x1440.jpg
-/usr/share/wallpapers/Alma-dark/contents/images/2560x1600.jpg
-/usr/share/wallpapers/Alma-dark/contents/images/3440x1440.jpg
-/usr/share/wallpapers/Alma-dark/metadata.desktop
 /usr/share/wallpapers/Alma-light
-/usr/share/wallpapers/Alma-light/contents
-/usr/share/wallpapers/Alma-light/contents/images
-/usr/share/wallpapers/Alma-light/contents/images/1800x1440.jpg
-/usr/share/wallpapers/Alma-light/contents/images/2048x1536.jpg
-/usr/share/wallpapers/Alma-light/contents/images/2560x1080.jpg
-/usr/share/wallpapers/Alma-light/contents/images/2560x1440.jpg
-/usr/share/wallpapers/Alma-light/contents/images/2560x1600.jpg
-/usr/share/wallpapers/Alma-light/contents/images/3440x1440.jpg
-/usr/share/wallpapers/Alma-light/metadata.desktop
+/usr/share/backgrounds/default.png
 /usr/share/backgrounds/images/default.png
+/usr/share/backgrounds/images/default-16_9.png
+/usr/share/backgrounds/images/default-16_10.png
+/usr/share/backgrounds/images/default-5_4.png
 
 #%license COPYING
 
