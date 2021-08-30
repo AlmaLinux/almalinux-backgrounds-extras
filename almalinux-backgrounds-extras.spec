@@ -33,7 +33,7 @@ AlmaLinux-related desktop backgrounds for KDE and XFCE
 declare -a bgtypes=("dark" "light" "abstract-dark" "abstract-light")
 # Declare an array for background sizes
 declare -a sizes=("1800x1440.jpg" "2048x1536.jpg" "2560x1080.jpg" "2560x1440.jpg" "2560x1600.jpg" "3440x1440.jpg")
-mkdir -p %{buildroot}/usr/share/backgrounds/xfce/
+# kde
 ## Loop through the above array(s) types and sizes to create links and metadata
 for bg in "${bgtypes[@]}"
 do
@@ -43,16 +43,17 @@ do
     # create sym link for all sizes
     for size in "${sizes[@]}"
     do
-        # KDE
         ln -sf /usr/share/backgrounds/Alma-$bg-$size %{buildroot}/usr/share/wallpapers/Alma-$bg/contents/images/$size
-        # XFCE
-        ln -sf /usr/share/backgrounds/Alma-$bg-$size %{buildroot}/usr/share/backgrounds/xfce/Alma-$bg-$size
     done
 done
 install -p -m 644 %{SOURCE0} %{buildroot}/usr/share/wallpapers/Alma-dark/metadata.desktop
 install -p -m 644 %{SOURCE1} %{buildroot}/usr/share/wallpapers/Alma-light/metadata.desktop
 install -p -m 644 %{SOURCE2} %{buildroot}/usr/share/wallpapers/Alma-abstract-dark/metadata.desktop
 install -p -m 644 %{SOURCE3} %{buildroot}/usr/share/wallpapers/Alma-abstract-light/metadata.desktop
+
+# xfce
+mkdir -p %{buildroot}/usr/share/backgrounds/images
+ln -s /usr/share/backgrounds/Alma-dark-2048x1536.jpg %{buildroot}/usr/share/backgrounds/images/default.png
 
 %post
 
@@ -103,30 +104,7 @@ install -p -m 644 %{SOURCE3} %{buildroot}/usr/share/wallpapers/Alma-abstract-lig
 /usr/share/wallpapers/Alma-light/contents/images/2560x1600.jpg
 /usr/share/wallpapers/Alma-light/contents/images/3440x1440.jpg
 /usr/share/wallpapers/Alma-light/metadata.desktop
-/usr/share/backgrounds/xfce/Alma-abstract-dark-1800x1440.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-dark-2048x1536.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-dark-2560x1080.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-dark-2560x1440.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-dark-2560x1600.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-dark-3440x1440.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-1800x1440.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-2048x1536.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-2560x1080.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-2560x1440.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-2560x1600.jpg
-/usr/share/backgrounds/xfce/Alma-abstract-light-3440x1440.jpg
-/usr/share/backgrounds/xfce/Alma-dark-1800x1440.jpg
-/usr/share/backgrounds/xfce/Alma-dark-2048x1536.jpg
-/usr/share/backgrounds/xfce/Alma-dark-2560x1080.jpg
-/usr/share/backgrounds/xfce/Alma-dark-2560x1440.jpg
-/usr/share/backgrounds/xfce/Alma-dark-2560x1600.jpg
-/usr/share/backgrounds/xfce/Alma-dark-3440x1440.jpg
-/usr/share/backgrounds/xfce/Alma-light-1800x1440.jpg
-/usr/share/backgrounds/xfce/Alma-light-2048x1536.jpg
-/usr/share/backgrounds/xfce/Alma-light-2560x1080.jpg
-/usr/share/backgrounds/xfce/Alma-light-2560x1440.jpg
-/usr/share/backgrounds/xfce/Alma-light-2560x1600.jpg
-/usr/share/backgrounds/xfce/Alma-light-3440x1440.jpg
+/usr/share/backgrounds/images/default.png
 
 #%license COPYING
 
