@@ -19,6 +19,8 @@ License:    MIT
 
 Requires: almalinux-backgrounds
 Requires: coreutils
+Conflicts: desktop-backgrounds-compat
+Provides: desktop-backgrounds-compat
 
 %description
 AlmaLinux-related desktop backgrounds for KDE and XFCE
