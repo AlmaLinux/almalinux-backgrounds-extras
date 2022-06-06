@@ -16,7 +16,7 @@ Source1:    alma-light-metadata.desktop
 Source2:    alma-abstract-dark-metadata.desktop
 Source3:    alma-abstract-light-metadata.desktop
 Source4:    alma-mountains-dark-metadata.desktop
-Source5:    alma-mountains-light-metadata.desktop
+Source5:    alma-mountains-white-metadata.desktop
 Source6:    alma-waves-dark-metadata.desktop
 Source7:    alma-waves-light-metadata.desktop
 Source8:    alma-waves-sunset-metadata.desktop
